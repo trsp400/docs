@@ -1,6 +1,6 @@
 Divisão- três frentes de trabalho:
 - UI/UX -> telas principais (vão ser por fluxo)
-- código
+- backoffice
 - documentação (bpmn -> visualização da camada de negócios, abstração da jornada)
 
 * as telas vem depois do fluxo estar montado
@@ -10,25 +10,39 @@ planning poker - scrum poker -> votação de story points por tarefas: isso é f
 story point:
 - bug não se pontua
 
+Documentação
+- 
 
 Sprint:
 - pendente -> em progresso
-- em progresso -> pronto para teste -> em teste (só pode testar a pessoa que não comitou o código), caso não esteja válido ou faltando alguma coisa, criar uma tarefa como rework 
+- em progresso -> pronto para teste -> em teste (só pode testar, a pessoa que não comitou o código), caso não esteja válido ou faltando alguma coisa, criar uma tarefa como rework 
 
 - Ideal é fechar a sprint sem rework
+
 
 Terminou a planning -> começar o refinamento (definir as tarefas) 
 
 Nenhum card pode ficar mais de um dia em progresso, por isso o ato de quebrar em subtarefas
 
-alinhar como subir a sprint
+entrega continua (feature por feature)
 
-cada funcionalidade, após ser mergeada em develop(depois de outra pessoa testar), deve ser feito o PR pra branch master diretamente da branch de feature.
+criar branch a partir de develop, fazer os commits nessa branch, publicar ela pra teste (fazer pr para develop), nao apagar a branch, após testado, fazer pr para master
 
-Ex.: feature/PROJECT_ID-TASK_ID -> develop
-Ex.: feature/PROJECT_ID-TASK_ID -> master
+após o fim da sprint, pr da develop para master
+
+devbox: pr da feature para develop
+
+hotfix: correção que já foi entregue/publicada(prioridade, essencial), a branch vem de master
 
 
-só deverá ser feito PR **develop -> master** quando fizer o alinhamento das tarefas, no fim da sprint
+dias da sprint:
+1º -> planning: planejar o que fazer durante a sprint
+proximos -> daylies para se dizer o que foi feito e o que será feito
 
+ultimo dia da sprint: 
+- review da sprint
+- verificar problemas que ocorreram, impecilios
+- entender o que causou os problemas/impecilios
+- focar na conclusão das tarefas/subtarefas
+- Verificar a quantidade de story points concluidos, para entender a capacidade de conclusão de tarefas da equipe
 
